@@ -1,6 +1,6 @@
 {
   "name": "gitart-vue-notify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vue.js notification plugin",
   "repository": {
     "type": "git",
