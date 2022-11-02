@@ -34,6 +34,7 @@ const ExpandTransitionGenerator = function(expandedParentClass = '', x = false) 
       const offset = `${el[offsetProperty]}px`
 
       el.style[sizeProperty] = '0'
+      el.style.opacity = '0'
 
       // eslint-disable-next-line no-void
       void el.offsetHeight // force reflow
@@ -45,6 +46,7 @@ const ExpandTransitionGenerator = function(expandedParentClass = '', x = false) 
 
       requestAnimationFrame(() => {
         el.style[sizeProperty] = offset
+        el.style.opacity = '1'
       })
     },
 
@@ -60,10 +62,15 @@ const ExpandTransitionGenerator = function(expandedParentClass = '', x = false) 
 
       el.style.overflow = 'hidden'
       el.style[sizeProperty] = `${el[offsetProperty]}px`
+      el.style.opacity = '1'
+
       // eslint-disable-next-line no-void
       void el.offsetHeight // force reflow
 
-      requestAnimationFrame(() => (el.style[sizeProperty] = '0'))
+      requestAnimationFrame(() => {
+        el.style[sizeProperty] = '0'
+        el.style.opacity = '0'
+      })
     },
 
     onAfterLeave,
