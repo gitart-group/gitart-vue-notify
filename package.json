@@ -1,0 +1,26 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "test": "vitest"
+  },
+  "peerDependencies": {
+    "vue": "^3.0"
+  },
+  "devDependencies": {
+    "@gitart/eslint-config-vue": "^0.2.2",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vue/compiler-sfc": "^3.2.39",
+    "@vue/test-utils": "^2.0.2",
+    "eslint": "^8.26.0",
+    "happy-dom": "^7.6.6",
+    "sass": "~1.55.0",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.2",
+    "vitest": "^0.24.4",
+    "vue": "^3.2.41"
+  },
+  "engines": {
+    "node": ">=12.15.0"
+  }
+}

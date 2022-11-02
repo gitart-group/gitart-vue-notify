@@ -1,0 +1,49 @@
+{
+  "name": "gitart-vue-notify",
+  "version": "0.0.1",
+  "description": "Vue.js notification plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitart-group/gitart-vue-notify.git",
+    "directory": "./packages/gitart-vue-notify"
+  },
+  "author": {
+    "name": "Mykhailo Kryvoruchko",
+    "email": "michaelgitart@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "node build/build.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./dev": "./src/index.ts",
+    "./dist/*": "./dist/*",
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "dev": [
+        "./src/index.ts"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.2.0",
+    "shelljs": "^0.8.5",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.2",
+    "vue-tsc": "^0.40.7"
+  },
+  "dependencies": {
+    "defu": "^6.1.0",
+    "gitart-animate-number": "^0.2.2",
+    "vue": "^3.2.41"
+  }
+}
