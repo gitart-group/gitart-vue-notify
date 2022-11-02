@@ -40,16 +40,19 @@ defineProps<{
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    flex-direction: column-reverse;
   }
 
   &--top-left {
     top: 0;
     left: 0;
+    flex-direction: column-reverse;
   }
 
   &--top-right {
     top: 0;
     right: 0;
+    flex-direction: column-reverse;
   }
 
   &--bottom-left {
